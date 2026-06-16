@@ -259,5 +259,95 @@
                 padding-top: 0.75rem;
                 letter-spacing: 0.1rem;
             }
+/* --- ESTILOS PARA EL BUSCADOR Y TABLA DE PROYECTOS --- */
+:root {
+    --color-oscurisimo: #03003B;
+    --color-oscuro: #000A78;
+    --color-normal: #991A00;
+    --color-iluminado: #A973EB;
+    --color-iluminadisimo: #E8B8FF;
+}
+
+#seccion-proyectos {
+    margin: 4rem auto;
+    width: 100%;
+}
+
+#seccion-proyectos h2 {
+    margin: 2rem 0;
+    font-weight: 400;
+    letter-spacing: 0.25rem;
+    font-size: calc(100% + 1vw + 1vh);
+    color: var(--color-oscuro);
+    text-align: center;
+}
+
+#elInput {
+    border: 0.1rem solid var(--color-iluminado);
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--color-oscuro);
+    outline: none;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: block;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16"><path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"/><path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: 99% center;
+}
+
+#elInput::placeholder {
+    color: var(--color-iluminado);
+}
+
+#elInput:focus {
+    border-color: var(--color-normal);
+}
+
+#contenedordetabla {
+    overflow-x: auto;
+    font-size: 90%;
+    margin-bottom: 3rem;
+}
+
+#seccion-proyectos table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#seccion-proyectos thead {
+    background: var(--color-iluminadisimo);
+    color: var(--color-oscuro);
+}
+
+#seccion-proyectos tbody {
+    color: var(--color-normal);
+}
+
+#seccion-proyectos td,
+#seccion-proyectos th {
+    border: 1px solid var(--color-normal);
+    padding: 0.75rem;
+}
+
+#seccion-proyectos th:nth-child(1),
+#seccion-proyectos td:nth-child(1),
+#seccion-proyectos th:nth-child(4),
+#seccion-proyectos td:nth-child(4) {
+    text-align: center;
+}
+
+#seccion-proyectos td:nth-child(2) {
+    color: var(--color-oscuro);
+    font-weight: 800;
+}
+
+#seccion-proyectos td:nth-child(3) {
+    font-style: italic;
+}
+
         </style>
   
