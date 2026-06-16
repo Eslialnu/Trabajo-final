@@ -29,7 +29,8 @@ const chart1 = new Chart(document.getElementById('chart1'), {
     }))
   },
   options: {
-    responsive: true,
+    responsive: true, 
+    animation: false,
     maintainAspectRatio: false,
     plugins: {
       legend: { display: true },
@@ -101,6 +102,7 @@ const chart2 = new Chart(document.getElementById('chart2'), {
   options: {
     indexAxis: 'y',
     responsive: true,
+    animation: false,
     maintainAspectRatio: false,
     plugins: {
       legend: { display: true },
