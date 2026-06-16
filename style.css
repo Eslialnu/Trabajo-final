@@ -232,7 +232,7 @@
             }
 
 
-           /* ── Figura que contiene el gráfico ── */
+            /* ── Figura que contiene el gráfico ── */
 
             figure {
                 margin: 2rem -1.5rem;
@@ -242,7 +242,7 @@
                 border-radius: 4px;
             }
 
-             {
+            .contenedor-grafico {
                 position: relative;
                 width: 100%;
                 height: 450px; 
