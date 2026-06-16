@@ -127,3 +127,45 @@ const chart2 = new Chart(document.getElementById('chart2'), {
     }
   }
 });
+// --- LÓGICA DEL BUSCADOR DE PROYECTOS DE TÍTULO ---
+
+const t = document.querySelector("#este");
+const URL_API = "https://api.myjson.online/v1/records/8565c9cb-bf2a-4e39-8a32-08b933ffc4f2";
+
+// Consumir los datos de la API e insertarlos en la tabla
+fetch(URL_API)
+    .then((respuesta) => {
+        if (!respuesta.ok) {
+            throw new Error("Error HTTP: " + respuesta.status);
+        }
+        return respuesta.json();
+    })
+    .then((datos) => {
+        var trabajo = datos.data;
+        console.log(trabajo);
+        trabajo.forEach((x) => {
+            t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}">
+                <td>${x.name}</td>
+                <td>${x.title}</td>
+                <td>${x.grade}</td>
+                <td>${x.category}</td>
+                <td>${x.tutor}</td>
+            </tr>`;
+        });
+    })
+    .catch((error) => {
+        console.error("Algo salió mal al cargar los proyectos:", error);
+    });
+
+// Función para remover acentos/tildes en la búsqueda
+function sinAcentos(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+// Evento de escucha para filtrar en tiempo real mientras se escribe
+document.getElementById("elInput").addEventListener("keyup", function () {
+    const valor = sinAcentos(this.value.toLowerCase());
+    document.querySelectorAll("#este tr").forEach(function (fila) {
+        fila.style.display = sinAcentos(fila.textContent.toLowerCase()).includes(valor) ? "" : "none";
+    });
+});
