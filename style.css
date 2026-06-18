@@ -13,12 +13,15 @@
 
 :root {
     /* Colores */
---color-text: rgb(64,64,64);
---color-muted: rgb(102,102,102);
---accent: #e8571a;
+  --bg: #fefefe;
+  --color-text: rgb(64,64,64);
+  --color-muted: rgb(102,102,102);
+  --accent: #e8571a;
+  --border: #d9d9d9;
+
     /* Tipografía */
-    --serif:  "Spectral", serif;
-    --sans:   "Georama", sans-serif;
+    --serif: "Spectral", serif;
+    --sans: "Georama", sans-serif;
 }
 
 body {
@@ -259,8 +262,9 @@ figure figcaption {
 /* --- ESTILOS PARA EL BUSCADOR Y TABLA DE PROYECTOS --- */
 
 #seccion-proyectos {
-    margin: 4rem auto;
-    width: 100%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0 2rem;
 }
 
 #seccion-proyectos h2 {
