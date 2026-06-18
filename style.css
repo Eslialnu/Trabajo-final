@@ -1,264 +1,264 @@
 <style>
-            /*
-                Lo que sigue está "inspirado" en un trabajo de Reuters Graphics:
-                https://www.reuters.com/graphics/IRAN-CRISIS/OIL-CONSUMERS/akpeyynmypr/
-            */
+/*
+    Lo que sigue está "inspirado" en un trabajo de Reuters Graphics:
+    https://www.reuters.com/graphics/IRAN-CRISIS/OIL-CONSUMERS/akpeyynmypr/
+*/
 
-            *,
-            *::before,
-            *::after {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-            }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-            :root {
-                /* Colores */
-                --bg: #fefefe;
-                --color-text: rgb(64, 64, 64);
-                --color-muted: rgb(102, 102, 102);
-                --accent: #e8571a;
-                --border: silver;
-                /* Tipografía */
-                --serif:  "Spectral", serif;
-                --sans:   "Georama", sans-serif;
-            }
+:root {
+    /* Colores */
+    --bg: #fefefe;
+    --color-text: rgb(64, 64, 64);
+    --color-muted: rgb(102, 102, 102);
+    --accent: #e8571a;
+    --border: silver;
+    /* Tipografía */
+    --serif:  "Spectral", serif;
+    --sans:   "Georama", sans-serif;
+}
 
-            body {
-                background: var(--bg);
-                font-family: var(--serif);
-                color: var(--color-text);
-                font-size: 1.25rem;
-                line-height: 1.5;
-                -webkit-font-smoothing: antialiased;
-            }
+body {
+    background: var(--bg);
+    font-family: var(--serif);
+    color: var(--color-text);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
 
-            /* ── Barra de navegación y pie: comparten la misma estructura de layout ── */
+/* ── Barra de navegación y pie: comparten la misma estructura de layout ── */
 
-            nav,
-            footer {
-                border-color: var(--border);
-                border-style: solid;
-                font-family: var(--sans);
-                font-size: calc(0.5rem + 0.5vw + 0.5vh);
-                font-weight: 700;
-            }
+nav,
+footer {
+    border-color: var(--border);
+    border-style: solid;
+    font-family: var(--sans);
+    font-size: calc(0.5rem + 0.5vw + 0.5vh);
+    font-weight: 700;
+}
 
-            nav { border-width: 0 0 1px; margin-bottom:4.5vh;}
-            footer { border-width: 1px 0 0; margin-top: 20vh; }
+nav { border-width: 0 0 1px; margin-bottom:4.5vh;}
+footer { border-width: 1px 0 0; margin-top: 20vh; }
 
-            nav > div,
-            footer > div {
-                width: 90%;
-                max-width: 980px;
-                margin: 0 auto;
-                padding: calc(0.6rem + 0.4vw) 0;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+nav > div,
+footer > div {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: calc(0.6rem + 0.4vw) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-            nav div span:first-child {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                letter-spacing: 0.05vw;
-            }
+nav div span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 0.05vw;
+}
 
-            footer div {
-                letter-spacing: 0.05vw;
-                font-size:0.8rem;
-            }
-
-
-            /* ── Estilos de enlace ── */
-
-            a {
-                color: var(--color-text);
-                text-decoration: underline;
-                text-underline-offset: 2px;
-                text-decoration-thickness: 1px;
-                text-decoration-style: dotted;
-            }
-
-            a:hover {
-                text-decoration: none;
-                color: black;
-            }
-
-            /* ── Cabecera ── */
-
-            header {
-                width: 95%;
-                max-width: 42rem;
-                margin: 0 auto;
-                padding: 0 1rem;
-                text-align: center;
-                font-family: var(--sans);
-            }
-
-            header img {
-                width: calc(100% + 2rem);
-                height: auto;
-                margin: 0 -1rem;
-            }
-
-            header a {
-                text-decoration: none;
-            }
-
-            header a:hover {
-                text-decoration: underline;
-                text-underline-offset: 2px;
-                text-decoration-thickness: 1px;
-                text-decoration-style: dotted;
-            }
+footer div {
+    letter-spacing: 0.05vw;
+    font-size:0.8rem;
+}
 
 
-            /* ── Metadatos de la cabecera ── */
+/* ── Estilos de enlace ── */
 
-            address,
-            time {
-                font-size: 0.875rem;
-                font-weight: 400;
-                font-style: normal;
-                line-height: 1;
-                color: var(--color-muted);
-            }
+a {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    text-decoration-style: dotted;
+}
 
-            address {
-                margin-top: 2.5rem;
-            }
+a:hover {
+    text-decoration: none;
+    color: black;
+}
 
-            address a {
-                font-weight: 600;
-            }
+/* ── Cabecera ── */
 
-            time {
-                margin: 0.5rem 0 2.5rem;
-                display: block;
-            }
+header {
+    width: 95%;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    font-family: var(--sans);
+}
 
-            /* ── Artículo ── */
+header img {
+    width: calc(100% + 2rem);
+    height: auto;
+    margin: 0 -1rem;
+}
 
-            main {
-                width: 95%;
-                max-width: 42rem;
-                margin: 0 auto;
-                padding: 0 1.5rem;
-            }
+header a {
+    text-decoration: none;
+}
 
-
-            /* ── Jerarquía tipográfica ── */
-
-            h1 {
-                font-weight: 700;
-                font-size: calc(1.75rem + 0.25vh + 0.5vw);
-                letter-spacing: 0.05rem;
-                line-height: 1;
-                margin: 0.6rem 0 0.3rem 0;
-                color: var(--color-text);
-            }
-
-            h2 {
-                font-size: calc(0.8rem + 0.2vh + 0.4vw);
-                font-weight: 300;
-                letter-spacing: 0.025rem;
-                line-height: 1.4;
-                color: var(--color-text);
-            }
-
-            h3 {
-                font-size: 0.875rem;
-                font-weight: 700;
-                color: var(--color-muted);
-                text-transform: uppercase;
-                letter-spacing: 0.1rem;
-            }
-
-            h4, h5 {
-                font-family: var(--sans);
-                font-weight: 700;
-                color: var(--color-text);
-                letter-spacing: 0.05rem;
-                line-height: 1.3;
-            }
-
-            h4 { margin: 2rem 0 0; font-size: calc(0.825rem + 0.25vh + 0.25vw); }
-
-            h5 { margin: 4rem 0 0;font-size: calc(0.65rem + 0.25vh + 0.25vw); }
-
-            /* ── Cuerpo del texto ── */
-
-            p {
-                font-family: var(--serif);
-                color: var(--color-text);
-                margin: 1.2rem 0;
-            }
-
-            p small {
-                font-weight: 500;
-            }
-
-            em {
-                font-weight: 600;
-                font-style: normal;
-            }
-
-            h4 + p {
-                margin: 0.6rem 0 1.2rem;
-            }
-
-            h5 + p {
-                font-family: var(--sans);
-                font-size:0.8rem;
-                margin: 0.3rem 0 1.2rem;
-            }
-
-            ul {
-                margin: 0 0 1.1rem;
-                padding: 0;
-                list-style: none;
-                font-size: 90%;
-            }
-
-            ul li {
-                margin-bottom: 0.25rem;
-                padding-left: 1.25rem;
-                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/></svg>');
-                background-repeat: no-repeat;
-                background-size: 1rem 1rem;
-                background-position-y: center;
-            }
+header a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    text-decoration-style: dotted;
+}
 
 
-            /* ── Figura que contiene el gráfico ── */
+/* ── Metadatos de la cabecera ── */
 
-            figure {
-                margin: 2rem -1.5rem;
-                background: white;
-                padding: 1.5rem;
-                border: 2px solid #eee;
-                border-radius: 4px;
-            }
+address,
+time {
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    color: var(--color-muted);
+}
 
-            .contenedor-grafico {
-                position: relative;
-                width: 100%;
-                height: 450px; 
-                margin: 0 auto;
-            }
+address {
+    margin-top: 2.5rem;
+}
 
-            figure figcaption {
-                font-family: var(--sans);
-                color: var(--color-muted);
-                font-size: 0.8rem;
-                font-weight: 300;
-                line-height: 1.4;
-                margin-top: 1rem;
-                padding-top: 0.75rem;
-                letter-spacing: 0.1rem;
-            }
+address a {
+    font-weight: 600;
+}
+
+time {
+    margin: 0.5rem 0 2.5rem;
+    display: block;
+}
+
+/* ── Artículo ── */
+
+main {
+    width: 95%;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+
+/* ── Jerarquía tipográfica ── */
+
+h1 {
+    font-weight: 700;
+    font-size: calc(1.75rem + 0.25vh + 0.5vw);
+    letter-spacing: 0.05rem;
+    line-height: 1;
+    margin: 0.6rem 0 0.3rem 0;
+    color: var(--color-text);
+}
+
+h2 {
+    font-size: calc(0.8rem + 0.2vh + 0.4vw);
+    font-weight: 300;
+    letter-spacing: 0.025rem;
+    line-height: 1.4;
+    color: var(--color-text);
+}
+
+h3 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+h4, h5 {
+    font-family: var(--sans);
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: 0.05rem;
+    line-height: 1.3;
+}
+
+h4 { margin: 2rem 0 0; font-size: calc(0.825rem + 0.25vh + 0.25vw); }
+
+h5 { margin: 4rem 0 0;font-size: calc(0.65rem + 0.25vh + 0.25vw); }
+
+/* ── Cuerpo del texto ── */
+
+p {
+    font-family: var(--serif);
+    color: var(--color-text);
+    margin: 1.2rem 0;
+}
+
+p small {
+    font-weight: 500;
+}
+
+em {
+    font-weight: 600;
+    font-style: normal;
+}
+
+h4 + p {
+    margin: 0.6rem 0 1.2rem;
+}
+
+h5 + p {
+    font-family: var(--sans);
+    font-size:0.8rem;
+    margin: 0.3rem 0 1.2rem;
+}
+
+ul {
+    margin: 0 0 1.1rem;
+    padding: 0;
+    list-style: none;
+    font-size: 90%;
+}
+
+ul li {
+    margin-bottom: 0.25rem;
+    padding-left: 1.25rem;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    background-position-y: center;
+}
+
+
+/* ── Figura que contiene el gráfico ── */
+
+figure {
+    margin: 2rem -1.5rem;
+    background: white;
+    padding: 1.5rem;
+    border: 2px solid #eee;
+    border-radius: 4px;
+}
+
+.contenedor-grafico {
+    position: relative;
+    width: 100%;
+    height: 450px; 
+    margin: 0 auto;
+}
+
+figure figcaption {
+    font-family: var(--sans);
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    letter-spacing: 0.1rem;
+}
 /* --- ESTILOS PARA EL BUSCADOR Y TABLA DE PROYECTOS --- */
 :root {
     --color-oscurisimo: #03003B;
@@ -289,7 +289,6 @@
     font-size: 15px;
     color: var(--color-oscuro);
     outline: none;
-    margin-bottom: 1.5rem;
     width: 100%;
     display: block;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16"><path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"/><path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"/></svg>');
@@ -306,48 +305,75 @@
     border-color: var(--color-normal);
 }
 
-#contenedordetabla {
-    overflow-x: auto;
-    font-size: 90%;
-    margin-bottom: 3rem;
-}
-
-#seccion-proyectos table {
+/* Contenedor relativo: ancla el dropdown justo debajo del input */
+#buscador-wrapper {
+    position: relative;
     width: 100%;
-    border-collapse: collapse;
-    text-align: left;
+    margin-bottom: 1.5rem;
 }
 
-#seccion-proyectos thead {
-    background: var(--color-iluminadisimo);
-    color: var(--color-oscuro);
+/* Lista de resultados tipo dropdown: oculta por defecto, flota sobre el contenido */
+#listaResultados {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    right: 0;
+    z-index: 10;
+    max-height: 320px;
+    overflow-y: auto;
+    background: white;
+    border: 0.1rem solid var(--color-iluminado);
+    border-radius: 4px;
+    box-shadow: 0 8px 20px rgba(0, 10, 120, 0.12);
+    font-size: 90%;
 }
 
-#seccion-proyectos tbody {
+#listaResultados.visible {
+    display: block;
+}
+
+#listaResultados li {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid var(--color-iluminadisimo);
+    cursor: pointer;
     color: var(--color-normal);
 }
 
-#seccion-proyectos td,
-#seccion-proyectos th {
-    border: 1px solid var(--color-normal);
-    padding: 0.75rem;
+#listaResultados li:last-child {
+    border-bottom: none;
 }
 
-#seccion-proyectos th:nth-child(1),
-#seccion-proyectos td:nth-child(1),
-#seccion-proyectos th:nth-child(4),
-#seccion-proyectos td:nth-child(4) {
-    text-align: center;
+#listaResultados li:hover,
+#listaResultados li.activo {
+    background: var(--color-iluminadisimo);
 }
 
-#seccion-proyectos td:nth-child(2) {
+#listaResultados li.sin-resultados {
+    color: var(--color-muted);
+    font-style: italic;
+    cursor: default;
+}
+
+#listaResultados li.sin-resultados:hover {
+    background: white;
+}
+
+#listaResultados .resultado-titulo {
+    display: block;
     color: var(--color-oscuro);
     font-weight: 800;
+    margin-bottom: 0.15rem;
 }
 
-#seccion-proyectos td:nth-child(3) {
+#listaResultados .resultado-meta {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-normal);
+}
+
+#listaResultados .resultado-meta em {
+    font-weight: 600;
     font-style: italic;
 }
-
-        </style>
-  
+</style> 
