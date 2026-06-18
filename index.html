@@ -102,22 +102,9 @@
 <section id="seccion-proyectos">
     <h2>PROYECTOS DE TÍTULO</h2>
 
-    <input type="text" id="elInput" placeholder="Filtrar títulos…" />
-    
-    <div id="contenedordetabla">
-        <table>
-            <thead>
-                <tr>
-                    <th>Autor</th>
-                    <th>Proyecto</th>
-                    <th>Nota</th>
-                    <th>Categoría</th>
-                    <th>Prof. guía</th>
-                </tr>
-            </thead>
-            <tbody id="este">
-                </tbody>
-        </table>
+    <div id="buscador-wrapper">
+        <input type="text" id="elInput" placeholder="Buscar por autor, proyecto, categoría o profesor guía…" autocomplete="off" />
+        <ul id="listaResultados"></ul>
     </div>
 </section>
 			
@@ -159,7 +146,3 @@
 
     </body>
 </html>
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-		<script src="script.js"></script>
-
