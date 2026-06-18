@@ -262,9 +262,8 @@ figure figcaption {
 /* --- ESTILOS PARA EL BUSCADOR Y TABLA DE PROYECTOS --- */
 
 #seccion-proyectos {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    padding: 0 2rem;
+    margin: 4rem auto;
+    width: 100%;
 }
 
 #seccion-proyectos h2 {
@@ -305,7 +304,7 @@ figure figcaption {
 #buscador-wrapper {
     position: relative;
     width: 100%;
-    margin-bottom: 2rem;
+    margin: 0 auto 2rem auto;
 }
 
 /* Lista de resultados tipo dropdown: oculta por defecto, flota sobre el contenido */
