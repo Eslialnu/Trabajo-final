@@ -8,22 +8,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"/>
 		<link href="style.css" rel="stylesheet"/>
-       
     </head>
     <body>
         <nav>
             <div>
                 <span>
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32" fill="#3400FF">
-
 <path d="M5.6,56.85c0-17.46,11.68-27.55,25-27.55S52,37.67,52,46.4c0,8.36-5.17,13-10.58,13A10.6,10.6,0,0,1,36.47,58V57.1a3.28,3.28,0,0,0,1-2.46,3.6,3.6,0,0,0-3.81-3.44c-2.46,0-4.8,1.72-4.8,6.76,0,6.15,5.29,9.35,11.93,9.35,10.83,0,16.61-7.87,32-7.87A38.69,38.69,0,0,1,94.4,66.57v22H5.6Zm67-4.3a31.14,31.14,0,0,0-11.07,2.09V38.28l16.36-6.4,16.48,6.4V59.07C92.8,57.71,84.19,52.55,72.63,52.55Z"/>
 </svg>
-					
-					
-					
-					
-					
-					
 					Educación
                 </span>
 
@@ -44,120 +36,106 @@
 
         <main id="contenedor">
 
-             <p>Elegir dónde estudiar Diseño en Chile no es solo una decisión vocacional. Es también una decisión geográfica y económica. La oferta de programas no se distribuye de forma homogénea en el territorio, las instituciones que los imparten no tienen el mismo nivel de calidad certificada, y los costos varían significativamente según dónde se estudie. Estas tres dimensiones —territorio, calidad y costo— rara vez se analizan juntas, pero es precisamente en su intersección donde se revelan las condiciones reales de acceso a la educación superior en Diseño.</p>
-            <p>La concentración de la oferta académica en la Región Metropolitana no solo limita las opciones disponibles para estudiantes de otras zonas del país, sino que también se refleja en el costo de acceso. Con un arancel promedio que supera al de todas las demás regiones, estudiar Diseño en Santiago implica un gasto significativamente mayor, lo que agrega una barrera económica a la barrera geográfica que ya enfrentan quienes viven fuera de la capital.</p>
+            <p>Un proyecto de título de Diseño no es solo un ejercicio académico. Es también una declaración de intenciones: una elección sobre a quién se diseña, desde qué lugar y con qué propósito. En la Escuela de Diseño de la Universidad de Chile, esa elección queda registrada en cada memoria, en cada nombre de proyecto, en cada categoría de usuario que los estudiantes deciden abordar durante el último tramo de su formación.</p>
+
+            <p>Analizar esos registros en conjunto —entre 2022 y 2025— permite trazar un mapa de los grupos sociales que la disciplina elige atender y de las problemáticas que considera prioritarias. Más allá de los casos individuales, emergen patrones que revelan hacia dónde apunta colectivamente el Diseño cuando tiene libertad de elección. Y también revelan lo que todavía no mira.</p>
 
             <h4>¿A qué grupos sociales se dirigen los proyectos de título?</h4>
 
-            <p>En el siguiente gráfico podemos ver la respuesta.</p>
+            <p>Algunos destinatarios aparecen con mayor frecuencia que otros. Niños, adultos mayores y personas en situación de enfermedad o discapacidad concentran una parte importante de los proyectos, lo que sugiere una inclinación de la disciplina hacia usuarios considerados vulnerables o con necesidades específicas. Sin embargo, esta distribución no ha sido estática: a lo largo del período analizado, ciertos grupos han ganado presencia mientras otros se han mantenido en los márgenes.</p>
 
             <figure>
-    <div class="contenedor-grafico">
-        <canvas id="chart1"></canvas>
-    </div>
-    <figcaption>
-        Evolución temporal de grupos sociales entre 2022–2025
-    </figcaption>
-</figure>
+                <div class="contenedor-grafico">
+                    <canvas id="chart1"></canvas>
+                </div>
+                <figcaption>
+                    Evolución temporal de grupos sociales entre 2022–2025
+                </figcaption>
+            </figure>
 
-            <p>Para comparar una misma variable —el arancel promedio— entre múltiples categorías ordenadas por magnitud, los <a href="https://datavizcatalogue.com/ES/metodos/grafico_de_barras.html" target="_blank">gráficos de barras horizontales</a> resultan especialmente útiles. Al disponer las regiones de mayor a menor costo, la visualización permite identificar de inmediato dónde se concentran los valores más altos y cómo se distribuyen hacia los extremos.</p>
-    
+            <p>Para observar cómo cambia la composición de un conjunto a lo largo del tiempo, los <a href="https://datavizcatalogue.com/ES/metodos/grafico_de_barras.html" target="_blank">gráficos de barras apiladas</a> resultan especialmente útiles. Al comparar las proporciones de cada grupo en distintos años, la visualización permite identificar tendencias sostenidas, giros abruptos y categorías que permanecen constantes independientemente del contexto.</p>
 
-            <p>Sin embargo, el costo de un programa no depende solo de la región donde se imparte. Otro factor relevante es la calidad institucional de quienes lo ofrecen, medida a través de los años de acreditación que otorga la Comisión Nacional de Acreditación.</p>
+            <p>La evolución temporal muestra que el interés por ciertos grupos no responde únicamente a preferencias individuales de los estudiantes, sino también a conversaciones más amplias que ocurren dentro y fuera de la escuela. Los años de mayor visibilidad pública de temas como salud mental, envejecimiento o educación inclusiva coinciden con períodos de mayor concentración de proyectos orientados a esos destinatarios.</p>
 
-            <p>En Chile, <a href="https://bcn.cl/2ewsw" target="_blank">la ley</a> obliga a acreditarse a las instituciones de educación superior. Carreras, entre las que se cuentan las de Diseño, quedan exentas de esta obligatoriedad.</p>
-
-            <p>Cada acreditación obligatoria e institucional evalúa el cumplimiento del proyecto corporativo y verifica la existencia de mecanismos eficaces de autorregulación y de aseguramiento de la calidad. A partir del resultado de cada evaluación, la <a href="https://www.cnachile.cl/Paginas/Acreditacion-institucional.aspx">Comisión Nacional de Acreditación (<small>CNA</small>)</a> determina el plazo para la próxima, con tres niveles de cumplimiento:</p>
-
-            <ul>
-                <li><em>Acreditada en nivel de excelencia:</em> de 6 a 7 años.</li>
-                <li><em>Acreditada en nivel avanzado:</em> de 4 a 5 años.</li>
-                <li><em>Acreditada en nivel básico:</em> 3 años.</li>
-            </ul>
-
-            <p>Por acotar, podemos <em>revisar las acreditaciones de las universidades</em>, que son las instituciones responsables de ofrecer el 35,82% de las vacantes totales de la educación superior para carreras de Diseño en 2026 (2.717 cupos del total de 7.586, según registros del <a href="https://www.mifuturo.cl/bases-de-datos-de-oferta-academica/" target="_blank">Servicio de Información de Educación Superior, <small>SIES</small></a>).</p>
-
-            <p>Revisando estas acreditaciones, podemos encontrar plazos de acreditación que oscilan entre los 3 y los 7 años.
-            </p>
+            <p>En Chile, el campo del Diseño ha ampliado progresivamente su comprensión del usuario. Si durante décadas el diseño gráfico e industrial tendió a imaginar un receptor genérico y promedio, las últimas generaciones de egresados muestran una sensibilidad creciente hacia la diversidad de experiencias y contextos. Los proyectos de título son uno de los espacios donde esa sensibilidad se vuelve visible.</p>
 
             <h4>¿Qué temáticas aparecen en cada grupo?</h4>
-			
-			  <p>En el siguiente gráfico podemos ver la respuesta.</p>
-			
-			 <figure>
-    <div class="contenedor-grafico">
-        <canvas id="chart2"></canvas>
-    </div>
-    <figcaption>
-        Asociaciones recurrentes entre problemáticas y grupos sociales.
-    </figcaption>
-</figure>
-			
-            <p>Para visualizar patrones en estructuras complejas, los <a href="https://datavizcatalogue.com/ES/metodos/diagrama_de_dispersion.html" target="_blank">diagramas de distribución</a> resultan idóneos. Al proyectar una colección de puntos mediante coordenadas cartesianas, el cruce de las variables en los ejes horizontal y vertical permite detectar la presencia y fuerza de una correlación entre ambas.</p>
 
-            <p>Al trazar una línea de mejor ajuste entre el programa de menor costo y acreditación básica (Diseño de Interiores y Ambientes en la <small>UNIACC</small>) hasta la opción de mayor costo y acreditación (Diseño en la <small>PUC</small>), se observa una pendiente ascendente en la distribución de los puntos. Si bien esto sugiere una correlación positiva, donde un mayor número de años de acreditación tiende a coincidir con aranceles más altos, la fuerza de correlación de débil y los valores atípicos son varios.</p>
+            <p>No basta con saber a quién se diseña: importa también entender qué problema se intenta resolver. Cada grupo social tiende a asociarse con ciertos tipos de problemáticas, y esa asociación no es azarosa. Refleja tanto las necesidades reales de cada destinatario como los marcos con que el Diseño los interpreta.</p>
 
-<figure>
-  <img src="matrixplot.webp" style="width:100%; height:auto; border:1px solid var(--rule);" />
-  <figcaption>
-    <strong>Figura 1.</strong> Diagrama Aluvial: ¿Cómo se distribuyen los flujos entre categorías y públicos?.
-  </figcaption>
-</figure>
+            <figure>
+                <div class="contenedor-grafico">
+                    <canvas id="chart2"></canvas>
+                </div>
+                <figcaption>
+                    Asociaciones recurrentes entre problemáticas y grupos sociales.
+                </figcaption>
+            </figure>
 
+            <p>Para detectar patrones de co-ocurrencia entre variables categóricas, los <a href="https://datavizcatalogue.com/ES/metodos/diagrama_de_dispersion.html" target="_blank">mapas de calor</a> permiten identificar rápidamente qué combinaciones son frecuentes y cuáles prácticamente no existen. La intensidad del color en cada celda revela la densidad de proyectos que abordan esa combinación específica de grupo y temática.</p>
+
+            <p>Algunas asociaciones son previsibles: los proyectos orientados a adultos mayores tienden a abordar autonomía, movilidad y acceso a servicios; los dirigidos a niños se concentran en educación y juego. Pero también aparecen asociaciones menos evidentes que merecen atención, como la escasa presencia de proyectos que crucen problemáticas medioambientales con grupos rurales, o la baja frecuencia con que las comunidades migrantes aparecen como destinatarios explícitos.</p>
+
+            <figure>
+                <img src="matrixplot.webp" style="width:100%; height:auto; border:1px solid var(--rule);" />
+                <figcaption>
+                    <strong>Figura 1.</strong> Diagrama Aluvial: ¿Cómo se distribuyen los flujos entre categorías y públicos?
+                </figcaption>
+            </figure>
+
+            <p>El diagrama aluvial permite rastrear cómo se conectan los grupos sociales con las temáticas y, desde ahí, con los tipos de solución propuestos. Los flujos más anchos señalan los caminos más recorridos por los proyectos de título; los más delgados, las combinaciones que todavía son territorio poco explorado. Esta lectura en conjunto —quién, qué problema, qué solución— revela la gramática implícita con que la Escuela de Diseño de la Universidad de Chile ha producido conocimiento proyectual en los últimos cuatro años.</p>
+
+            <figure>
+                <img src="aluvial.webp" style="width:100%; height:auto; border:1px solid var(--rule);" />
+                <figcaption>
+                    <strong>Figura 2.</strong> Heatmap: ¿Qué combinaciones usuario-temática son frecuentes y cuáles prácticamente no existen?
+                </figcaption>
+            </figure>
+
+            <p>El análisis de estas visualizaciones permite observar que los proyectos de título no son decisiones aisladas ni meramente personales. En su conjunto, constituyen un retrato de los valores, prioridades y puntos ciegos que caracterizan a una generación de diseñadores en formación. Saber a quién se elige diseñar —y a quién se deja fuera— es también una forma de entender qué tipo de disciplina está construyendo la escuela, y hacia dónde podría orientarse en los años que vienen.</p>
+
+            <section id="seccion-proyectos">
+                <h2>PROYECTOS DE TÍTULO</h2>
+
+                <div id="buscador-wrapper">
+                    <input type="text" id="elInput" placeholder="Buscar por autor, proyecto, categoría o profesor guía…" autocomplete="off" />
+                    <ul id="listaResultados"></ul>
+                </div>
+            </section>
 			
-			<p>El análisis de ambas visualizaciones permite observar que el acceso a la formación en Diseño en Chile está condicionado por dos factores que operan simultáneamente: el territorio y la calidad institucional. Estudiar en Santiago implica un costo significativamente mayor que en regiones, y dentro de ese mercado centralizado, las instituciones con mayor acreditación tienden a cobrar aranceles más altos. Para un estudiante de regiones, esto significa enfrentar una doble barrera: la distancia y el precio. Más que variables aisladas, estos elementos conforman un sistema de desigualdades que define quién puede acceder, desde dónde y a qué costo.</p>
-
-<figure>
-  <img src="aluvial.webp" style="width:100%; height:auto; border:1px solid var(--rule);" />
-  <figcaption>
-    <strong>Figura 2.</strong> Heatmap: ¿Qué combinaciones usuario-temática son frecuentes y cuáles prácticamente no existen?.
-  </figcaption>
-</figure>
-			
-<section id="seccion-proyectos">
-    <h2>PROYECTOS DE TÍTULO</h2>
-
-    <div id="buscador-wrapper">
-        <input type="text" id="elInput" placeholder="Buscar por autor, proyecto, categoría o profesor guía…" autocomplete="off" />
-        <ul id="listaResultados"></ul>
-    </div>
-</section>
-			
-           <h5>Fuentes</h5>
-			<small>
-<p>
-    Ministerio de Educación de Chile. (2026). <em>Oferta académica 2026.</em> 
-    Servicio de Información de Educación Superior (SIES), Subsecretaría de Educación Superior. 
-    <a href="https://www.mifuturo.cl/bases-de-datos-de-oferta-academica/" target="_blank">mifuturo.cl</a>
-</p>
-<p>
-    Comisión Nacional de Acreditación. (2026). <em>Acreditación institucional.</em> 
-    <a href="https://www.cnachile.cl/Paginas/Acreditacion-institucional.aspx" target="_blank">cnachile.cl</a>
-</p>
-<p>
-    Biblioteca del Congreso Nacional de Chile. (2006). <em>Ley 20.129: Establece un sistema nacional 
-    de aseguramiento de la calidad de la educación superior.</em> 
-    <a href="https://bcn.cl/2ewsw" target="_blank">bcn.cl</a>
-</p>
-<p>
-    Ribecca, S. (s.f.). <em>The Data Visualisation Catalogue.</em> 
-    <a href="https://datavizcatalogue.com" target="_blank">datavizcatalogue.com</a>
-</p>
-</small>
+            <h5>Fuentes</h5>
+            <small>
+                <p>
+                    Ministerio de Educación de Chile. (2026). <em>Oferta académica 2026.</em> 
+                    Servicio de Información de Educación Superior (SIES), Subsecretaría de Educación Superior. 
+                    <a href="https://www.mifuturo.cl/bases-de-datos-de-oferta-academica/" target="_blank">mifuturo.cl</a>
+                </p>
+                <p>
+                    Comisión Nacional de Acreditación. (2026). <em>Acreditación institucional.</em> 
+                    <a href="https://www.cnachile.cl/Paginas/Acreditacion-institucional.aspx" target="_blank">cnachile.cl</a>
+                </p>
+                <p>
+                    Biblioteca del Congreso Nacional de Chile. (2006). <em>Ley 20.129: Establece un sistema nacional 
+                    de aseguramiento de la calidad de la educación superior.</em> 
+                    <a href="https://bcn.cl/2ewsw" target="_blank">bcn.cl</a>
+                </p>
+                <p>
+                    Ribecca, S. (s.f.). <em>The Data Visualisation Catalogue.</em> 
+                    <a href="https://datavizcatalogue.com" target="_blank">datavizcatalogue.com</a>
+                </p>
+            </small>
         </main>
 
         <footer>
             <div>
-                <a href="https://www.reuters.com/graphics/IRAN-CRISIS/OIL-CONSUMERS/akpeyynmypr/" target="_blank"
-                    >Inspirado en Reuters</a
-                >
+                <a href="https://www.reuters.com/graphics/IRAN-CRISIS/OIL-CONSUMERS/akpeyynmypr/" target="_blank">Inspirado en Reuters</a>
                 <a href="https://github.com/profesorfaco/troncal">Diseño y visualización de información</a>
             </div>
         </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-		<script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script.js"></script>
 
     </body>
 </html>
