@@ -304,7 +304,7 @@ figure figcaption {
 #buscador-wrapper {
     position: relative;
     width: 100%;
-    margin: 0 auto 2rem auto;
+    margin-bottom: 2rem;
 }
 
 /* Lista de resultados tipo dropdown: oculta por defecto, flota sobre el contenido */
