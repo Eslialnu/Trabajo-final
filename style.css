@@ -198,8 +198,8 @@ p small {
 }
 
 em {
-    font-weight: 500;
-    font-style: italic;
+    font-weight: 600;
+    font-style: normal;
 }
 
 h4 + p {
