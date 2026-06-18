@@ -273,13 +273,20 @@ figure figcaption {
     font-size: calc(1.1rem + 0.5vw);
 }
 
+
 #elInput {
+    width: 100%;
+    min-height: 56px;
+    padding: 1rem 1.2rem;
     border: 1px solid #d9d9d9;
-    padding: 0.75rem 1rem;
-    font-family: var(--sans);
-    font-size: 0.95rem;
-    color: var(--color-text);
     background-color: white;
+
+    font-family: var(--sans);
+    font-size: 1rem;
+    color: var(--color-text);
+
+    outline: none;
+    transition: border-color 0.2s ease;
 }
 
 #elInput::placeholder {
@@ -294,7 +301,7 @@ figure figcaption {
 #buscador-wrapper {
     position: relative;
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 /* Lista de resultados tipo dropdown: oculta por defecto, flota sobre el contenido */
