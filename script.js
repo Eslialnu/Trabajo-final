@@ -127,12 +127,15 @@ const chart2 = new Chart(document.getElementById('chart2'), {
     }
   }
 });
-// --- LÓGICA DEL BUSCADOR DE PROYECTOS DE TÍTULO ---
+// --- LÓGICA DEL BUSCADOR DE PROYECTOS DE TÍTULO (estilo dropdown) ---
 
-const t = document.querySelector("#este");
+const inputBuscador = document.getElementById("elInput");
+const listaResultados = document.getElementById("listaResultados");
 const URL_API = "https://api.myjson.online/v1/records/8565c9cb-bf2a-4e39-8a32-08b933ffc4f2";
 
-// Consumir los datos de la API e insertarlos en la tabla
+let proyectos = []; // guarda todos los proyectos una vez descargados
+
+// Descargar los datos de la API y guardarlos en memoria (no se pintan todavía)
 fetch(URL_API)
     .then((respuesta) => {
         if (!respuesta.ok) {
@@ -141,17 +144,7 @@ fetch(URL_API)
         return respuesta.json();
     })
     .then((datos) => {
-        var trabajo = datos.data;
-        console.log(trabajo);
-        trabajo.forEach((x) => {
-            t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}">
-                <td>${x.name}</td>
-                <td>${x.title}</td>
-                <td>${x.grade}</td>
-                <td>${x.category}</td>
-                <td>${x.tutor}</td>
-            </tr>`;
-        });
+        proyectos = datos.data || [];
     })
     .catch((error) => {
         console.error("Algo salió mal al cargar los proyectos:", error);
@@ -162,10 +155,74 @@ function sinAcentos(str) {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-// Evento de escucha para filtrar en tiempo real mientras se escribe
-document.getElementById("elInput").addEventListener("keyup", function () {
-    const valor = sinAcentos(this.value.toLowerCase());
-    document.querySelectorAll("#este tr").forEach(function (fila) {
-        fila.style.display = sinAcentos(fila.textContent.toLowerCase()).includes(valor) ? "" : "none";
+// Construye el <li> de cada resultado
+function crearItemResultado(p) {
+    const li = document.createElement("li");
+    li.innerHTML = `
+        <span class="resultado-titulo">${p.title}</span>
+        <span class="resultado-meta"><em>${p.name}</em> · Nota ${p.grade} · ${p.category} · Prof. guía: ${p.tutor}</span>
+    `;
+    // Al hacer clic en un resultado, se completa el input con ese proyecto y se cierra el dropdown
+    li.addEventListener("click", () => {
+        inputBuscador.value = p.title;
+        ocultarDropdown();
     });
+    return li;
+}
+
+function mostrarDropdown() {
+    listaResultados.classList.add("visible");
+}
+
+function ocultarDropdown() {
+    listaResultados.classList.remove("visible");
+}
+
+// Filtra y pinta las coincidencias; si no hay texto, no muestra nada
+function actualizarResultados(valorBusqueda) {
+    listaResultados.innerHTML = "";
+
+    if (valorBusqueda.trim() === "") {
+        ocultarDropdown();
+        return;
+    }
+
+    const termino = sinAcentos(valorBusqueda.toLowerCase());
+
+    const coincidencias = proyectos.filter((p) => {
+        const texto = sinAcentos(
+            `${p.name} ${p.title} ${p.category} ${p.tutor}`.toLowerCase()
+        );
+        return texto.includes(termino);
+    });
+
+    if (coincidencias.length === 0) {
+        const li = document.createElement("li");
+        li.className = "sin-resultados";
+        li.textContent = "No se encontraron proyectos que coincidan.";
+        listaResultados.appendChild(li);
+    } else {
+        coincidencias.forEach((p) => {
+            listaResultados.appendChild(crearItemResultado(p));
+        });
+    }
+
+    mostrarDropdown();
+}
+
+inputBuscador.addEventListener("keyup", function () {
+    actualizarResultados(this.value);
+});
+
+inputBuscador.addEventListener("focus", function () {
+    if (this.value.trim() !== "") {
+        mostrarDropdown();
+    }
+});
+
+document.addEventListener("click", function (evento) {
+    const dentroDelBuscador = evento.target.closest("#buscador-wrapper");
+    if (!dentroDelBuscador) {
+        ocultarDropdown();
+    }
 });
